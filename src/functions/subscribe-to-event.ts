@@ -1,7 +1,7 @@
 import { db } from "../drizzle/client"
 import { subscriptions } from "../drizzle/schema/subscriptions"
 
-interface SubscribeToEvent {
+interface SubscribeToEventParams {
   name: string
   email: string
 }
@@ -9,7 +9,7 @@ interface SubscribeToEvent {
 export async function subscribeToEvent( {
   name,
   email
-}: SubscribeToEvent) {
+}: SubscribeToEventParams) {
   const result = await db.insert(subscriptions).values({
     name,
     email
