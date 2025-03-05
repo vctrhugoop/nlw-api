@@ -1,10 +1,12 @@
 import { fastify } from 'fastify';
 import { fastifyCors } from '@fastify/cors';
-import { validatorCompiler, serializerCompiler, ZodTypeProvider, jsonSchemaTransform } from 'fastify-type-provider-zod';
+import { validatorCompiler, serializerCompiler, type ZodTypeProvider, jsonSchemaTransform } from 'fastify-type-provider-zod';
 import { fastifySwagger } from '@fastify/swagger';
 import { fastifySwaggerUi } from '@fastify/swagger-ui';
 import { subscribeToEventRoute } from './routes/subscribe-to-event-route';
 import { env } from './env';
+import { accesInviteLinkRoute } from './routes/access-invite-link';
+
 
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
@@ -29,6 +31,7 @@ app.register(fastifySwaggerUi, {
 })
 
 app.register(subscribeToEventRoute)
+app.register(accesInviteLinkRoute)
 
 app.listen({ port: env.PORT }).then(() => {
   console.log('Server is running on port 3333')
