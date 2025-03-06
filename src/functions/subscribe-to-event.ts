@@ -6,7 +6,7 @@ import { redis } from "../redis/client"
 interface SubscribeToEventParams {
   name: string
   email: string
-  referrarId: string | null
+  referrarId?: string | null
 }
 
 export async function subscribeToEvent( {
