@@ -5,7 +5,7 @@ import { fastifySwagger } from '@fastify/swagger';
 import { fastifySwaggerUi } from '@fastify/swagger-ui';
 import { subscribeToEventRoute } from './routes/subscribe-to-event-route';
 import { env } from './env';
-import { accesInviteLinkRoute } from './routes/access-invite-link';
+import { accesInviteLinkRoute } from './routes/access-invite-link-route';
 
 
 
