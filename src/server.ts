@@ -9,6 +9,7 @@ import { accesInviteLinkRoute } from './routes/access-invite-link-route';
 
 import { getSubscriberInviteClicksRoute } from './routes/get-subscriber-invte-clicks-route';
 import { getSubscriberInvitesCountRoute } from './routes/get-subscriber-invites-count';
+import { getSubscriberRankingPositionRoute } from './routes/get-subscriber-ranking-position-route';
 
 
 
@@ -37,6 +38,7 @@ app.register(subscribeToEventRoute)
 app.register(accesInviteLinkRoute)
 app.register(getSubscriberInviteClicksRoute)
 app.register(getSubscriberInvitesCountRoute)
+app.register(getSubscriberRankingPositionRoute)
 
 app.listen({ port: env.PORT }).then(() => {
   console.log('Server is running on port 3333')
