@@ -3,8 +3,8 @@ Content-Type: application/json
 
 {
   "name": "User Tester",
-  "email": "tester@exemple.com",
-  "referrer": "57d0de75-0029-4205-a72a-21ecddbd6a66"
+  "email": "tester3@exemple.com",
+  "referrer": "7c8329d6-52f1-468a-8539-8fc22c5e163d"
 }
 
 ###
@@ -25,3 +25,9 @@ GET http://localhost:3333/subscribers/57d0de75-0029-4205-a72a-21ecddbd6a66/ranki
 ###
 
 GET http://localhost:3333/subscribers/57d0de75-0029-4205-a72a-21ecddbd6a66/ranking/position
+
+
+
+###
+
+GET http://localhost:3333/ranking
